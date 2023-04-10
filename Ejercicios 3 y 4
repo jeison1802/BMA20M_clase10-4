@@ -1,0 +1,64 @@
+print("Ejercicio 3\n")
+
+L1 = list()
+s = 0
+
+n = int(input("Ingrese el numero de elementos: "))
+
+for i in range(n):
+    val= int(input("Ingrese un numero: "))
+    L1.append(val)
+     
+print("La lista es: ",L1)
+
+
+for v in L1:
+    s+=v
+    
+print(f"La suma de los valores es: {s}")    
+
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 10 09:47:53 2023
+
+@author: PROFESOR
+"""
+
+
+
+print("\nEjercicio 4\n")
+
+
+
+L2 = [4,3,0,8,9]
+L3 = []
+
+
+val2 = int(input("Ingrese un numero para la division: "))
+
+
+for i in L2: 
+    
+    if i==0:
+        print("No se puede realizar la division porque el divisor es cero") 
+        continue
+  
+    div = val2/i
+    L3.append(div)
+    print(div)
+    
+print("La lista con los nuevos valores son: ",L3)    
+    
+    
+# for i in L2: 
+#     try: 
+#         div = val2/i
+#         print(div)
+        
+#     except ZeroDivisionError(val2) as e:
+#          print(e)
+         
+         
+         
+   
+
