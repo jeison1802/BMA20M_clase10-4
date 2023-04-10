@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 10 09:11:48 2023
+
+@author: PROFESOR
+"""
+
+print("----------Ejercicios------------------\n")
+
+# print("----------Ejercicio 1------------------\n")
+# ## Hallar el numero de euler 
+
+n = int(input("Ingrese el numero de terminos: "))
+s = 1 
+i=1
+x = 1 
+
+def factorial(a):
+    cont  = 1
+    prod = 1
+    while(cont<=a): 
+        prod *= cont
+        cont+=1
+    return prod    
+        
+
+while(i<n):
+    term = (x**i)/factorial(i)
+    s+= term
+    i+=1
+    if (term<0.0001):
+        break
+
+print(s)
+
+
+
+
+
+
+print("----------Ejercicio 2------------------\n")
+
+suma = 0 
+num = 0
+while(num!=-1):
+    suma+=num
+    num = int(input("Ingrese un numero:  "))
+   
+print(f"La suma es: {suma}")    
