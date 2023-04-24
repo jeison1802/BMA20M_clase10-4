@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Apr 24 09:16:52 2023
+
+@author: PROFESOR
+"""
+
+import pymysql
+from flask import Flask
+from flask import Flask,render_template,request,redirect,flash
+
+
+print("Hola mundo")
+
+
+def obtener_conexion():
+    return pymysql.connect (host='localhost',user = 'root',password = 'estrella1802',db='alumnos')
+
+obtener_conexion()
+
+
+def obtener_alumnos():
+    conexion = obtener_conexion()
+    alumnos = []
+    with conexion.cursor() as cursor:
+        cursor.execute("SELECT idnotas,nota,materia FROM notas")
+        alumno = cursor.fetchall()
+    conexion.close()
+    return alumno
+
+x = obtener_alumnos()
+print(x)
+
+     
+print("Hola mundo ooo!!!")
+
+
